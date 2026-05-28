@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    @apply bg-base text-primary antialiased selection:bg-white/10 selection:text-white;
+    color-scheme: dark;
+  }
+}
