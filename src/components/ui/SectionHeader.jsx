@@ -38,7 +38,7 @@ export default function SectionHeader({
       {subtitle && (
         <motion.p 
           variants={fadeBlurReveal}
-          className="text-base md:text-lg text-[#A1A1AA] max-w-2xl font-normal leading-relaxed"
+          className="text-base md:text-lg text-white max-w-2xl font-normal leading-relaxed"
         >
           {subtitle}
         </motion.p>
