@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Button from './Button';
+import logoImg from '../../assets/Logo.png';
 
 export default function Navbar() {
   const navLinks = [
@@ -20,7 +21,8 @@ export default function Navbar() {
       <div className="bg-[#050505]/60 backdrop-blur-xl border border-white/10 rounded-full px-6 py-3 flex items-center justify-between shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
         
         {/* Logo */}
-        <div className="flex-shrink-0 cursor-pointer">
+        <div className="flex-shrink-0 cursor-pointer flex items-center gap-3">
+          <img src={logoImg} alt="NanoBox Icon" className="h-12 w-auto object-contain" />
           <span className="text-xl font-bold tracking-tighter text-[#F5F5F5]">
             NanoBox
           </span>
