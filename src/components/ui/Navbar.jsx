@@ -22,7 +22,7 @@ export default function Navbar() {
         
         {/* Logo */}
         <div className="flex-shrink-0 cursor-pointer flex items-center gap-3">
-          <img src={logoImg} alt="NanoBox Icon" className="h-12 w-auto object-contain" />
+          <img src={logoImg} alt="NanoBox Icon" className="h-8 w-auto object-contain" />
           <span className="text-xl font-bold tracking-tighter text-[#F5F5F5]">
             NanoBox
           </span>
