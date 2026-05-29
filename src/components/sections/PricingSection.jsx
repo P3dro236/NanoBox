@@ -11,7 +11,7 @@ export default function PricingSection() {
     {
       name: "Starter",
       target: "Indivíduos e Casais",
-      price: "49",
+      price: "79",
       capacity: "1 TB",
       features: [
         "Backup automático de celular",
@@ -25,7 +25,7 @@ export default function PricingSection() {
     {
       name: "Family",
       target: "Famílias Digitais",
-      price: "99",
+      price: "139",
       capacity: "4 TB",
       features: [
         "Compartilhamento familiar seguro",
@@ -39,7 +39,7 @@ export default function PricingSection() {
     {
       name: "Creator",
       target: "Fotógrafos e Designers",
-      price: "199",
+      price: "229",
       capacity: "8 TB+",
       features: [
         "Otimização para arquivos RAW/4K",
