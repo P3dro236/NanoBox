@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { fadeBlurReveal, staggerContainer } from '../../utils/motion';
+import hardwareMockup from '../../assets/Dashboard.png';
 
 export default function HeroSection() {
   const containerRef = useRef(null);
@@ -95,9 +96,11 @@ export default function HeroSection() {
         className="mt-20 w-full max-w-4xl aspect-video bg-white/[0.02] rounded-3xl border border-white/10 backdrop-blur-sm flex flex-col items-center justify-center relative overflow-hidden shadow-2xl shadow-black/50"
       >
         <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-80 z-10 pointer-events-none" />
-        <span className="text-white/20 text-sm font-medium tracking-widest relative z-20">
-          [ HARDWARE MOCKUP PLACEHOLDER ]
-        </span>
+        <img 
+          src={hardwareMockup} 
+          alt="NanoBox Hardware" 
+          className="w-full h-full object-cover relative z-0" 
+        />
       </motion.div>
       
     </section>
