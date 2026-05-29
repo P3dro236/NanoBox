@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Smartphone, Globe, Share2 } from 'lucide-react';
 import SectionHeader from '../ui/SectionHeader';
 import { fadeBlurReveal, staggerContainer, cardChildReveal } from '../../utils/motion';
+import appMockup from '../../assets/GptMobile.png';
 
 export default function MobileAppSection() {
   const features = [
@@ -27,16 +28,16 @@ export default function MobileAppSection() {
     <section className="w-full py-24 md:py-32 px-6 bg-base relative z-20 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-16 lg:gap-24">
-          
+
           {/* Coluna da Esquerda (Copy e Features) */}
-          <motion.div 
+          <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
             className="flex flex-col"
           >
-            <SectionHeader 
+            <SectionHeader
               badgeText="Ecossistema"
               title="O poder da nuvem no seu bolso."
               subtitle="Acesso global, gestão de arquivos e backup automático em segundo plano. Uma experiência premium."
@@ -46,8 +47,8 @@ export default function MobileAppSection() {
 
             <div className="flex flex-col gap-10">
               {features.map((item, index) => (
-                <motion.div 
-                  key={index} 
+                <motion.div
+                  key={index}
                   variants={cardChildReveal}
                   className="flex items-start gap-5 group"
                 >
@@ -68,7 +69,7 @@ export default function MobileAppSection() {
           </motion.div>
 
           {/* Coluna da Direita (Mobile Mockup) */}
-          <motion.div 
+          <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
@@ -78,22 +79,24 @@ export default function MobileAppSection() {
             {/* Glow effect atrás do celular */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] aspect-square bg-white/[0.02] blur-[120px] rounded-full pointer-events-none" />
 
-            {/* Mockup do Smartphone */}
-            <div className="w-full max-w-[320px] aspect-[9/19] rounded-[3rem] bg-[#0F0F10] border-[8px] border-[#171717] shadow-2xl shadow-white/[0.03] relative flex items-center justify-center overflow-hidden z-10 ring-1 ring-white/10">
+            {/* Mockup do Smartphone (Carcaça) */}
+            <div className="w-full max-w-[320px] aspect-[9/19] rounded-[3rem] bg-[#050505] border-[8px] border-[#171717] shadow-2xl shadow-white/[0.03] relative flex items-center justify-center z-10 ring-1 ring-white/10 p-2.5">
               
               {/* Entalhe (Notch) Fictício / Ilha Dinâmica */}
-              <div className="absolute top-2 left-1/2 -translate-x-1/2 w-[30%] h-[26px] bg-[#050505] rounded-full z-20 shadow-inner" />
+              <div className="absolute top-2 left-1/2 -translate-x-1/2 w-[35%] h-[24px] bg-[#050505] rounded-b-[1rem] z-30 shadow-inner" />
 
-              {/* Placeholder Inner Content */}
-              <div className="flex flex-col items-center text-center px-6 z-20">
-                <Smartphone size={40} className="text-white/20 mb-4" strokeWidth={1} />
-                <span className="text-white/20 text-sm font-medium tracking-widest uppercase">
-                  [ APP UI ]
-                </span>
+              {/* Tela do Aparelho (Safe Area) */}
+              <div className="w-full h-full relative rounded-[2.5rem] overflow-hidden bg-[#0F0F10]">
+                {/* App UI Image */}
+                <img
+                  src={appMockup}
+                  alt="NanoBox App Interface"
+                  className="w-full h-full object-cover relative z-10"
+                />
+                
+                {/* Gradiente Interno para dar volume à tela sem ofuscar o app */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#050505] to-transparent opacity-20 pointer-events-none z-20" />
               </div>
-              
-              {/* Gradiente Interno para dar volume à tela apagada */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#050505] to-transparent opacity-90 pointer-events-none z-10" />
             </div>
           </motion.div>
 

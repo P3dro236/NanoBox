@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { fadeBlurReveal, staggerContainer } from '../../utils/motion';
-import hardwareMockup from '../../assets/Dashboard.png';
+import hardwareMockup from '../../assets/Nas.png';
 
 export default function HeroSection() {
   const containerRef = useRef(null);
