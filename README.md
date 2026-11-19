@@ -42,4 +42,4 @@ Siga os passos abaixo para rodar o projeto na sua máquina:
 
 1. Clone o repositório:
 ```bash
-git clone [https://github.com/SEU_USUARIO/NanoBox.git](https://github.com/SEU_USUARIO/NanoBox.git)
+git clone [https://github.com/P3dro236/NanoBox.git](https://github.com/P3dro236/NanoBox.git)
